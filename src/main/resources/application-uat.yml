@@ -1,0 +1,4 @@
+rocket:
+  meta: {
+    "cdc": { "topic": "T-BXG-DB-CDC-EVENT", "producer": "PID-BXG-DB-CDC-EVENT" }
+  }
