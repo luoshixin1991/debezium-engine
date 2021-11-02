@@ -30,7 +30,7 @@ public class DbChangeConsumer implements DebeziumEngine.ChangeConsumer<ChangeEve
                             DebeziumEngine.RecordCommitter<ChangeEvent<String, String>> recordCommitter)
             throws InterruptedException {
         /*
-         这里要靠路这些value为Null数据没有调用recordCommitter.markProcessed(r)会不会产生影响
+         这里要考虑这些value为Null数据没有调用recordCommitter.markProcessed(r)会不会产生影响
          */
         // 当数据库执行delete时候会有一个delete类型的事件和一条value为null消息{"id":93710}, value: null}
         records = records.stream()
